@@ -1,4 +1,4 @@
-# Last updated: 4/4/2026, 1:36:26 AM
+# Last updated: 4/5/2026, 1:10:22 AM
 1class Solution:
 2    def subtractProductAndSum(self, n: int) -> int:
 3        prod=1
