@@ -1,4 +1,4 @@
-# Last updated: 4/10/2026, 12:00:28 PM
+# Last updated: 4/10/2026, 12:00:49 PM
 1class Solution:
 2    def countSubstrings(self, s: str) -> int:
 3        res=0
@@ -8,11 +8,11 @@
 7            while l>=0 and r<=len(s)-1:
 8                if s[l]==s[r]:
 9                    res+=1
-10                else:
-11                    break
-12                l-=1
-13                r+=1
-14            
+10                    l-=1
+11                    r+=1
+12                else:
+13                    break
+14
 15        for i in range(len(s)):
 16            l=i
 17            r=i+1
