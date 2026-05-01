@@ -1,19 +1,16 @@
-# Last updated: 4/30/2026, 10:46:56 PM
+# Last updated: 5/1/2026, 10:57:42 PM
 1class Solution:
-2    def uniqueOccurrences(self, arr: List[int]) -> bool:
-3        hashm={}
-4        s=set()
-5        for i in arr:
-6            if i in hashm:
-7                hashm[i]+=1
+2    def removeStars(self, s: str) -> str:
+3        st=[]
+4        word=""
+5        for i in range(len(s)):
+6            if s[i]=="*":
+7                st.pop()
 8            else:
-9                hashm[i]=1
-10        for i in hashm:
-11            if hashm[i] in s:
-12                return False
-13            else:
-14                s.add(hashm[i])
+9                st.append(s[i])
+10        for i in st:
+11            word+=i
+12        
+13        return word
+14
 15        
-16        return True
-17
-18        
