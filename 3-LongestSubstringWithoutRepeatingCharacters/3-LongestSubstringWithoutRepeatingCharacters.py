@@ -1,17 +1,20 @@
-# Last updated: 3/28/2026, 12:55:55 AM
-class Solution:
-    def lengthOfLongestSubstring(self, s: str) -> int:
-        hash_set=set()
-        left=right=0
-        num=0
-        while right<len(s):
-            while s[right] in hash_set:
-                hash_set.remove(s[left])
-                left+=1
-            num=max(right-left+1,num)
-            
-            hash_set.add(s[right])
-            right+=1
-        
-        return num
-            
+# Last updated: 8/4/2026, 10:45:01 PM
+1class Solution:
+2    def lengthOfLongestSubstring(self, s: str) -> int:
+3        hashs=set()
+4        l=0
+5        r=0
+6        maxl=0
+7        while r<len(s):
+8            if s[r] not in hashs:
+9                hashs.add(s[r])
+10                maxl=max(maxl, len(s[l:r+1]))
+11                r+=1
+12            else:
+13                while s[r] in hashs:
+14                    hashs.remove(s[l])
+15                    l+=1
+16        
+17        return maxl
+18            
+19
